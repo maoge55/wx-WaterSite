@@ -1,0 +1,22 @@
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item{
+  width: 25%;
+  flex: 1 0 auto;
+  text-align: center;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 11px;
+  color: #232323;
+  border-top: 1px solid #dddbda;
+}
+.accent{color: #fe7692;}
+.bor{border-bottom: 1px solid #dddbda;}
+.active2{
+  color: rgb(255, 57, 119)!important;
+  background: skyblue
+}

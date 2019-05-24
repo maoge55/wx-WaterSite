@@ -1,0 +1,17 @@
+<view class='container'>
+  <image class='about-banner' src="/images/a.jpg"></image>
+  <view style='font-size:20px;font-weight:bold;'>地下水监测系统</view>
+
+  <form bindsubmit="formSubmit">
+    <view class='center'>
+      <view>账号</view>
+      <input placeholder="请输入账号" type="text" maxlength="20" value="{{uid}}" name="uid" />
+      <view>密码</view>
+      <input placeholder="请输入密码" type="password" maxlength="10" value="{{password}}" name="password" />
+      <view style='display:flex'>
+        <button type="primary" formType="submit">登录</button>
+        <button type="primary" bindtap='registerTap'>注册</button>
+      </view>
+    </view>
+  </form>
+</view>

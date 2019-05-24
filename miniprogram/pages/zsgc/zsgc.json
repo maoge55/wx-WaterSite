@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "监测站点",
+  "usingComponents": {
+    "clothClass":"/component/clothClass/clothClass"
+  }
+}

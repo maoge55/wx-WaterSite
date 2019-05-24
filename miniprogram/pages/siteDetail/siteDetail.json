@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "监测站详细信息",
+  "usingComponents": {
+    "van-cell": "../../vant/cell/index",
+    "van-cell-group": "../../vant/cell-group/index"
+  }
+}

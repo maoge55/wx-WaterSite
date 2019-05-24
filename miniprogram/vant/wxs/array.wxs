@@ -1,0 +1,11 @@
+function isArray(array) {
+  return array && array.constructor === 'Array';
+}
+function toloc(loc){
+  var x = loc.x.toFixed(2);
+  var y = loc.y.toFixed(2);
+  var str='东经'+x+'度，北纬'+y+'度';
+  return str
+}
+module.exports.isArray = isArray;
+module.exports.toloc=toloc

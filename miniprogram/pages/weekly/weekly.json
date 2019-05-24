@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText":"每周监测详情",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas",
+    "select":"../../component/select/select",
+    "van-picker":"/vant/picker/index",
+    "van-popup":"/vant/popup/index",
+    "van-button":"/vant/button/index"
+  }
+}

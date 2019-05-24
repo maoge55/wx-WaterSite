@@ -1,0 +1,8 @@
+<view class='menu'>
+  <block wx:for='{{nav}}' wx:key=''>
+    <view class="item  {{(index>7)?'bor':''}} {{(index==current)?'active2':''}}" catchtap='toList'
+    data-item='{{item}}' data-index='{{index}}'>
+      {{item.name}}
+    </view>
+  </block>
+</view>

@@ -1,0 +1,6 @@
+<view class='container'>
+  <image class='about-banner' src="/images/a.jpg"></image>
+  <view style='font-weight:bold;font-size:70rpx'>地下水监测系统  </view>
+  <!--<van-button type="primary" bindtap='updateWater'>update</van-button>-->
+  <text>联系我：1198977707</text>
+</view>

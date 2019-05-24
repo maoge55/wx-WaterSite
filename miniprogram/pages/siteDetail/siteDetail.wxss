@@ -1,0 +1,5 @@
+.introduce{
+  padding: 10rpx;
+  font-size: 14px;
+  color:#666;
+}

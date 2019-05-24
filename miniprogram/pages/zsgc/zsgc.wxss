@@ -1,0 +1,42 @@
+.sitetitle{
+  padding: 20rpx 0;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  background: #666;
+}
+.sitelist{
+  width: 750rpx;
+    display: flex;
+  flex-direction: column;
+}
+.site{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background: #f2f2f2;
+  border-bottom:1px #dedede solid;
+  font-size: 15px;
+  position: relative;
+}
+.site-icon{
+  width: 20%;
+  text-align: center;
+}
+.site-icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.site-name{
+  width: 80%;
+}
+
+.site-info{
+  padding: 10rpx;
+  font-size: 12px;
+  padding-left:50rpx;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+}

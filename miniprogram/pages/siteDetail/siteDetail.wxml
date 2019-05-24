@@ -1,0 +1,33 @@
+<van-cell-group>
+<van-cell icon="location-o" title="监测点" border="{{ true }}" value="{{water.dname}}" 
+/>
+<van-cell  title="所属流域" border="{{ true }}" value="{{water.belong}}" 
+/>
+<van-cell  title="位置" border="{{ true }}" value="{{location}}" 
+/>
+<van-cell title="PH值" border="{{ true }}" value="{{water.ph}}" 
+/>
+<van-cell title="溶解氧" border="{{ true }}" value="{{water.oxygen}}" 
+/>
+<van-cell title="氨氮" border="{{ true }}" value="{{water.nitrogen}}" 
+/>
+<van-cell title="高锰酸钾" border="{{ true }}" value="{{water.permangan}}" 
+/>
+<van-cell title="总有机碳" border="{{ true }}" value="{{water.orgacarbon}}" 
+/>
+<van-cell title="监测日期" border="{{ true }}" value="{{water.date}}" 
+/>
+</van-cell-group>
+
+<view class='introduce'>
+  <text style='font-size:15px;font-weight:bold'>简介：</text>
+  <text>{{water.profile}}</text>
+</view>
+<view style='height:40rpx'></view>
+<view class='mapbtn'>
+  <button type='warn' bindtap='tomap'>前往地图查看此站点</button>
+</view>
+<view style='height:20rpx'></view>
+<view class='mapbtn'>
+  <button type='warn' bindtap='toweek'>查看一周数据</button>
+</view>

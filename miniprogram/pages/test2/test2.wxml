@@ -1,0 +1,2 @@
+<!--pages/test2/test2.wxml-->
+<button bindtap='sss'>添加日期</button>

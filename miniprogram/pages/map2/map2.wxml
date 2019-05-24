@@ -1,0 +1,45 @@
+<form bindsubmit='keysubmit'>
+  <view class='input-search'>
+    <view class='search' bindtap='openserch'>
+  <image src='/images/search.png' ></image>
+</view>
+    <input placeholder='请输入想要搜索监测站的关键词' value='{{keyword}}' bindconfirm='onconfirm'  name='keyword' focus='{{focus}}'></input>
+    <button size='mini' type='warn' form-type='submit'>搜索</button>
+  </view>
+</form>
+<map class='comty' 
+longitude='{{longitude}}' 
+latitude='{{latitude}}' 
+scale='{{scale}}' 
+markers='{{markers}}'
+include-points='{{points}}' 
+bindcallouttap='todetail'
+bindmarkertap='todetail'
+bindtap='hideser'
+id="myMap"
+show-location
+></map>
+
+<cover-view class='nav-left'>
+  <cover-image src='/images/rightjt.png' bindtap='onRightClk' class="{{flag?'xia':'you'}}"></cover-image>
+  <cover-view class='left-list-first' hidden='{{flag}}'>
+    <block wx:for='{{ly}}' wx:key=''>
+      <cover-view class="first-item {{(index==curitem)?'curitem':''}}" bindtap='changely' data-name='{{item.name}}' data-id='{{item.id}}'>{{item.name}}</cover-view>
+    </block>
+  </cover-view>
+</cover-view>
+
+<cover-view class='curly'>
+  <cover-view>所属流域：</cover-view>
+  <cover-view style='color:#e64340'>{{lyName}}</cover-view>
+</cover-view>
+
+<!-- <cover-view class='bg' hidden='{{flag2}}' bindtap='hidebg'></cover-view> -->
+
+<cover-view class='search-res' wx:if='{{searchres[0]}}' >
+  <block wx:for='{{searchres}}' wx:key=''>
+    <cover-view class='search-res-item' bindtap='tores' data-item='{{item}}'>
+      <cover-view>{{item.dname}}</cover-view>
+    </cover-view>
+  </block>
+</cover-view>

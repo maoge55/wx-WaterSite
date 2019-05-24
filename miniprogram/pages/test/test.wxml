@@ -1,0 +1,4 @@
+<button bindtap='test2'>测试2</button>
+<button bindtap='test1'>测试1</button>
+<van-tree-select items='{{nav}}'>
+</van-tree-select>

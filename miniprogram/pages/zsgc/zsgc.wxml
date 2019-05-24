@@ -1,0 +1,23 @@
+<wxs src="../../vant/wxs/array.wxs" module="array" />
+<clothClass current='{{current}}' nav='{{nav}}' bindchange='onnavclick'>
+</clothClass>
+<view class='sitetitle'>{{lyName}}</view>
+<view class='sitelist'>
+  <block wx:for='{{sites}}' wx:key=''>
+    <view class='site' bindtap='ckinfo' data-index='{{index}}'>
+      <view class='site-icon'>
+        <image src='/images/waterSite.png'></image>
+      </view>
+      <view class='site-name'>
+        <text>{{item.dname}}</text>
+      </view>
+      <view class="{{(!item.click)?'arrow-sign':'arrow-sign2'}}"></view>
+    </view>
+
+    <view class='site-info' hidden='{{!item.click}}'>
+      <text>位置：{{array.toloc(item.location)}}</text>
+      <text>所属流域：{{lyName}}</text>
+      <text style='color:blue;padding:15rpx;' bindtap='tositeDetail' data-id='{{item._id}}'>更多信息</text>
+    </view>
+  </block>
+</view>

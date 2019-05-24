@@ -1,0 +1,31 @@
+<view style='width:750rpx' class='selectlist'>
+  <view class='pan-choose'>
+    <picker bindchange="PickerChange" value="{{lyIndex}}" range="{{ly}}" range-key='name'>
+      <view class="picker">
+        {{ly[lyIndex].name}}
+      </view>
+    </picker>
+    <select width='400rpx' propArray='{{watersites}}' bindchoose='sitechange' nowText='{{cursite}}'>
+    </select>
+  </view>
+  <view style='height:20rpx'></view>
+  <view class='centerlist'>
+    <text class='nowdate'>{{cursite}}</text>
+  </view>
+  <view class='date-panel'>
+    <view class='date-pickers'>
+      <picker mode="date" value="{{startDate}}" start="{{startPoint}}" end="{{endPoint}}" bindchange="bindStartDateChange">
+        <view class="picker" style='background:#364123;color:#fff;font-size:14px;'>开始时间: {{startDate}}</view>
+      </picker>
+      <picker mode="date" value="{{endtDate}}" start="{{startDate}}" end="{{endPoint}}" bindchange="bindEndDateChange">
+        <view class="picker" style='background:#364123;color:#fff;font-size:14px;'>结束时间: {{endDate}}</view>
+      </picker>
+    </view>
+    <van-button round type="danger" bindclick='getDataByDate'>获取该时间段数据</van-button>
+  </view>
+</view>
+
+<view class="contain">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}">
+  </ec-canvas>
+</view>
