@@ -1,12 +1,12 @@
 {
   "cloud": true,
   "pages": [
+    "pages/login/login",
     "pages/weekly/weekly",
-    "pages/map2/map2",
     "pages/test2/test2",
+    "pages/map2/map2",
     "pages/test/test",
     "pages/zsgc/zsgc",
-    "pages/login/login",
     "pages/siteDetail/siteDetail",
     "pages/index/index",
     "pages/about/about"

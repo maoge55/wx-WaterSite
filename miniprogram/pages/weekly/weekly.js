@@ -1,15 +1,26 @@
 import * as echarts from '../../ec-canvas/echarts.min';
 let ly=require('../../utils/lyfw.js').liuyu
 let nowd=new Date();
+
+function GetDateStr(AddDayCount) {
+  var dd = new Date();
+  dd.setDate(dd.getDate() + AddDayCount);//获取AddDayCount天后的日期
+  var y = dd.getFullYear();
+  var m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);//获取当前月份的日期，不足10补0
+  var d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();//获取当前几号，不足10补0
+  return y + "-" + m + "-" + d;
+}
 /**
  * 获取近七天的日期
  */
 function getDate(){
   let dates = [];
-  for (let i = 0; i < 7; i++) {
-    let mydate = new Date();
-    let date = (mydate.getMonth()+1)+'-'+(mydate.getDate()-6+i);
-    dates.push(date)
+  for (let i = 6; i >=0; i--) {
+    let dd = new Date();
+    dd.setDate(dd.getDate()-i);
+    let m=dd.getMonth()+1;//获取月份
+    let d=dd.getDate();
+    dates.push(m+'-'+d);
   }
   return dates
 }
@@ -109,6 +120,7 @@ Page({
 
   onLoad: function(e) {
     console.log(new Date().getMonth())
+    console.log(getDate());
     let site=false
     if (!!e.sitestr){
       console.log(e.sitestr)
